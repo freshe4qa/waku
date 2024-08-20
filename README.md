@@ -62,6 +62,11 @@ DOMAIN=
 EXTRA_ARGS=
 RLN_RELAY_CONTRACT_ADDRESS=
 ```
+
+```
+git pull origin master
+```
+
 ```
 ./register_rln.sh
 ```
