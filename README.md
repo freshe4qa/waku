@@ -14,7 +14,7 @@ Explorer:
  - 2x CPUs; the faster clock speed the better
  - 2GB RAM
  - 40GB of storage (SSD or NVME)
- - Ubuntu 20.04
+ - Ubuntu 22.04
 
 Установка ноды:
 
