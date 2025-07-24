@@ -25,18 +25,27 @@ sudo apt update && sudo apt upgrade -y
 ```
 apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev -y
 ```
+
+curl -fsSL https://get.docker.com | sh
+sudo systemctl enable docker
+sudo systemctl restart docker
+sudo usermod -aG docker $USER
+
 ```
-sudo apt install docker.io
+curl -fsSL https://get.docker.com | sh
+sudo systemctl enable docker
+sudo systemctl restart docker
+sudo usermod -aG docker $USER
 ```
-(Пишем Y)
+
 ```
 docker --version
 ```
 ```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+apt  install docker-compose -y
 ```
 ```
-sudo chmod +x /usr/local/bin/docker-compose
+#sudo chmod +x /usr/local/bin/docker-compose
 ```
 ```
 docker-compose --version
@@ -51,8 +60,9 @@ nano .env
 ```
 Заменяем на свои значения
 ```
-ETH_CLIENT_ADDRESS=https://sepolia.infura.io/v3/<key>  # RPC Sepolia ETH
-ETH_TESTNET_KEY=<YOUR_TESTNET_PRIVATE_KEY_HERE>        # Приватный ключ кошелька где есть тестовые sepolia ETH (лучше создать новый кошелек)
+RLN_RELAY_ETH_CLIENT_ADDRESS=  # RPC Linea Sepolia
+ETH_TESTNET_ACCOUNT=           #Адрес кошелька
+ETH_TESTNET_KEY=               № Приватный ключ кошелька где есть тестовые linea sepolia ETH (лучше создать новый кошелек)
 RLN_RELAY_CRED_PASSWORD="my_secure_keystore_password"  # Придумайте пароль
 
 # Advanced
